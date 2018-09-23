@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <header>
-      <v-btn>Connexion</v-btn>
-      <v-btn>Inscription</v-btn>
+      <router-link :to="{ name: 'Connection' }">
+        <v-btn>Connexion</v-btn>
+      </router-link>
+      <router-link :to="{ name: 'Inscription' }">
+        <v-btn>Inscription</v-btn>
+      </router-link>
     </header>
     <v-container>
       <v-layout>

@@ -47,14 +47,14 @@
               ></v-text-field>
               <v-text-field
                 v-model="passwordConfirm"
-                :append-icon="show2 ? 'visibility' : 'visibility_off'"
+                :append-icon="show1 ? 'visibility' : 'visibility_off'"
                 :rules="passwordRules"
                 :error-messages='passwordMatchError()'
-                :type="show2 ? 'text' : 'password'"
+                :type="show1 ? 'text' : 'password'"
                 name="input-10-2"
                 label="Password Confirmation"
                 class="input-group--focused"
-                @click:append="show2 = !show2"
+                @click:append="show1 = !show1"
                 required
               ></v-text-field>
               <v-checkbox
@@ -82,7 +82,6 @@ export default {
     email: '',
     pseudo: '',
     show1: false,
-    show2: false,
     password: '',
     passwordConfirm: '',
     checkbox: false,
@@ -109,6 +108,7 @@ export default {
   }),
   methods: {
     submit () {
+      console.log('test')
     },
     clear () {
       this.$refs.form.reset()
